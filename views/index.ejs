@@ -1,0 +1,47 @@
+<div class="hero-section text-center py-5">
+    <h1 class="display-4 mb-4">Generate Your Brand with AI</h1>
+    <p class="lead mb-4">Create a unique brand identity in minutes using the power of artificial intelligence.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <% if (user) { %>
+            <a href="/dashboard" class="btn btn-primary btn-lg px-4 gap-3">Go to Dashboard</a>
+        <% } else { %>
+            <a href="/auth/signup" class="btn btn-primary btn-lg px-4 gap-3">Get Started</a>
+            <a href="/about" class="btn btn-outline-secondary btn-lg px-4">Learn More</a>
+        <% } %>
+    </div>
+</div>
+
+<div class="features-section py-5">
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">AI-Powered Branding</h3>
+                    <p class="card-text">Generate comprehensive brand strategies using advanced AI technology.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Color Palette Generation</h3>
+                    <p class="card-text">Get a perfect color scheme that matches your brand's personality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Brand Management</h3>
+                    <p class="card-text">Easily manage and update your brand strategy as your business grows.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cta-section text-center py-5">
+    <h2 class="mb-4">Ready to Create Your Brand?</h2>
+    <p class="lead mb-4">Join thousands of businesses that have transformed their brand identity with Artify One.</p>
+    <a href="/auth/signup" class="btn btn-primary btn-lg">Start Your Brand Journey</a>
+</div> 

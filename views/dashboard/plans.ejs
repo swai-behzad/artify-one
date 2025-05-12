@@ -1,0 +1,113 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="mb-4">Choose Your Plan</h1>
+            
+            <div class="row">
+                <!-- Free Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Free</h3>
+                            <h4 class="mb-4">$0<span class="text-muted">/month</span></h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">✓ 1 Brand</li>
+                                <li class="mb-2">✓ Basic Brand Strategy</li>
+                                <li class="mb-2">✓ Standard Support</li>
+                            </ul>
+                            <% if (!user.plan || user.plan.name === 'free') { %>
+                                <button class="btn btn-outline-primary w-100" disabled>Current Plan</button>
+                            <% } else { %>
+                                <form action="/dashboard/plans/downgrade" method="POST">
+                                    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                                    <button type="submit" class="btn btn-outline-primary w-100">Downgrade</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-primary">
+                        <div class="card-body">
+                            <h3 class="card-title">Pro</h3>
+                            <h4 class="mb-4">$29<span class="text-muted">/month</span></h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">✓ 5 Brands</li>
+                                <li class="mb-2">✓ Advanced Brand Strategy</li>
+                                <li class="mb-2">✓ Priority Support</li>
+                                <li class="mb-2">✓ Custom Brand Templates</li>
+                            </ul>
+                            <% if (user.plan && user.plan.name === 'pro') { %>
+                                <button class="btn btn-primary w-100" disabled>Current Plan</button>
+                            <% } else { %>
+                                <form action="/dashboard/plans/upgrade" method="POST">
+                                    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                                    <input type="hidden" name="plan" value="pro">
+                                    <button type="submit" class="btn btn-primary w-100">Upgrade to Pro</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="card-title">Enterprise</h3>
+                            <h4 class="mb-4">$99<span class="text-muted">/month</span></h4>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">✓ Unlimited Brands</li>
+                                <li class="mb-2">✓ Premium Brand Strategy</li>
+                                <li class="mb-2">✓ 24/7 Support</li>
+                                <li class="mb-2">✓ Custom Brand Templates</li>
+                                <li class="mb-2">✓ API Access</li>
+                            </ul>
+                            <% if (user.plan && user.plan.name === 'enterprise') { %>
+                                <button class="btn btn-outline-primary w-100" disabled>Current Plan</button>
+                            <% } else { %>
+                                <form action="/dashboard/plans/upgrade" method="POST">
+                                    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                                    <input type="hidden" name="plan" value="enterprise">
+                                    <button type="submit" class="btn btn-outline-primary w-100">Upgrade to Enterprise</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="/dashboard" class="btn btn-secondary">Back to Dashboard</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card.border-primary {
+    border-width: 2px;
+}
+
+.list-unstyled li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.list-unstyled li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #0d6efd;
+}
+</style> 

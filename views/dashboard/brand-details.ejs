@@ -1,0 +1,817 @@
+<div class="container-fluid">
+    <div class="row align-items-stretch" style="min-height: 80vh;">
+        <!-- Table of Contents -->
+        <div class="col-md-3 toc-container d-flex flex-column" style="height: 100%;">
+            <div class="toc-wrapper flex-grow-1">
+                <h3 class="toc-title">Table of Contents</h3>
+                <nav class="toc-nav">
+                    <ul class="toc-list">
+                        <li><a href="#" data-slide="0">Brand Purpose</a></li>
+                        <li><a href="#" data-slide="1">Brand Vision</a></li>
+                        <li><a href="#" data-slide="2">Competitive Analysis</a></li>
+                        <li><a href="#" data-slide="3">Target Audience</a></li>
+                        <li><a href="#" data-slide="4">Ideal Customer Profile</a></li>
+                        <li><a href="#" data-slide="5">Value Proposition</a></li>
+                        <li><a href="#" data-slide="6">Brand Story</a></li>
+                        <li><a href="#" data-slide="7">Brand Positioning</a></li>
+                        <li><a href="#" data-slide="8">Brand Personality</a></li>
+                        <li><a href="#" data-slide="9">Brand Voice</a></li>
+                        <li><a href="#" data-slide="10">Brand Messaging</a></li>
+                        <li><a href="#" data-slide="11">Slogan</a></li>
+                        <li><a href="#" data-slide="12">Visual Identity</a></li>
+                        <li><a href="#" data-slide="13">Color Palette</a></li>
+                        <li><a href="#" data-slide="14">Typography</a></li>
+                        <li><a href="#" data-slide="15">Imagery Style</a></li>
+                        <li><a href="#" data-slide="16">Marketing Strategy</a></li>
+                        <li><a href="#" data-slide="17">Marketing Insights</a></li>
+                        <li><a href="#" data-slide="18">Marketing Toolkit</a></li>
+                        <li><a href="#" data-slide="19">Domain Recommendations</a></li>
+                        <li><a href="#" data-slide="20">Website Recommendations</a></li>
+                        <li><a href="#" data-slide="21">Marketing Efforts</a></li>
+                        <li><a href="#" data-slide="22">Strategic Management</a></li>
+                        <li><a href="#" data-slide="23">Long-term Perspective</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9 d-flex flex-column" style="height: 100%;">
+            <div class="d-flex justify-content-end align-items-center mb-4">
+                <a href="/dashboard" class="btn btn-primary ms-auto" style="width: 200px;">Back to Dashboard</a>
+            </div>
+            <h1 class="brand-title mb-4 text-center"><%= brand.name %></h1>
+            <!-- Restore navigation buttons -->
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <div class="btn-group">
+                    <button class="btn btn-outline-primary" id="prevSlide" style="width: 100px;">Previous</button>
+                    <button class="btn btn-outline-primary" id="nextSlide" style="width: 100px;">Next</button>
+                </div>
+            </div>
+            <div class="flex-grow-1 d-flex align-items-stretch">
+                <div id="brandSlideshow" class="carousel slide w-100" data-bs-ride="false" data-bs-interval="false" style="height: 100%;">
+                    <!-- Carousel indicators -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Brand Purpose"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="1" aria-label="Brand Vision"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="2" aria-label="Competitive Analysis"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="3" aria-label="Target Audience"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="4" aria-label="Ideal Customer Profile"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="5" aria-label="Value Proposition"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="6" aria-label="Brand Story"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="7" aria-label="Brand Positioning"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="8" aria-label="Brand Personality"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="9" aria-label="Brand Voice"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="10" aria-label="Brand Messaging"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="11" aria-label="Slogan"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="12" aria-label="Visual Identity"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="13" aria-label="Color Palette"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="14" aria-label="Typography"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="15" aria-label="Imagery Style"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="16" aria-label="Marketing Strategy"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="17" aria-label="Marketing Insights"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="18" aria-label="Marketing Toolkit"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="19" aria-label="Domain Recommendations"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="20" aria-label="Website Recommendations"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="21" aria-label="Marketing Efforts"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="22" aria-label="Strategic Management"></button>
+                        <button type="button" data-bs-target="#brandSlideshow" data-bs-slide-to="23" aria-label="Long-term Perspective"></button>
+                    </div>
+
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <!-- Brand Purpose -->
+                        <div class="carousel-item active">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Purpose
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Explains why your brand exists beyond making money. A strong brand purpose helps connect with customers emotionally and guides business decisions."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.purpose) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Vision -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Vision
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Describes what your brand aims to achieve in the future. A compelling brand vision inspires and guides your team and resonates with customers."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.brand_vision) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Competitive Analysis -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Competitive Analysis
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Analyzes your competitors' strengths and weaknesses. Understanding your competition helps identify opportunities and threats."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.competitive_analysis) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Target Audience -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Target Audience
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Identifies who your ideal customers are, their needs, and behaviors. Understanding your target audience helps create more effective marketing strategies and messaging."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.target_audience) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ideal Customer Profile -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Ideal Customer Profile
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Describes your perfect customer in detail. Understanding your ideal customer helps target marketing efforts and improve customer acquisition."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.ideal_customer_profile) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Value Proposition -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Value Proposition
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Articulates the unique value your brand offers. A strong value proposition helps customers understand why they should choose your brand."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.value_proposition) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Story -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Story
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Tells the narrative of your brand's journey. A compelling brand story helps customers connect with your brand on a deeper level."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.brand_story) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Positioning -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Positioning
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines your brand's unique position in the market and how you want to be perceived. This helps differentiate your brand from competitors and guides all marketing efforts."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.position) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Personality -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Personality
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines the human characteristics of your brand. A clear brand personality helps create emotional connections with your audience."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.personality) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Voice -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Voice
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines your brand's personality in communication. A consistent brand voice helps build recognition and trust with your audience."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.brand_voice) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Brand Messaging -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Brand Messaging
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines how you communicate your brand's value and benefits. Clear messaging helps customers understand what makes your brand unique."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.messaging) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slogan -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Slogan
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="A memorable phrase that captures your brand's essence. A strong slogan helps customers remember your brand and its key message."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.slogan) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual Identity -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Visual Identity
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines your brand's visual elements and aesthetic direction. A consistent visual identity helps build brand recognition and trust."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.visual_identity) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Color Palette -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Color Palette
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Defines your brand's color scheme. A consistent color palette helps build brand recognition and convey your brand's personality."></i>
+                                    </h3>
+                                    <div class="content">
+                                        <% let palette = []; try { palette = JSON.parse(brand.color_palette); } catch(e) {} %>
+                                        <% if (palette && palette.length) { %>
+                                            <div class="row g-4">
+                                                <% palette.forEach(function(color) { %>
+                                                    <div class="col-md-6 d-flex align-items-center mb-4">
+                                                        <div class="color-circle me-4 flex-shrink-0" style="background-color: <%= color.hex %>;"></div>
+                                                        <div>
+                                                            <div class="fw-bold mb-1" style="font-size:1.1rem;"><%= color.hex %></div>
+                                                            <div class="text-muted small"><%= color.description %></div>
+                                                        </div>
+                                                    </div>
+                                                <% }); %>
+                                            </div>
+                                        <% } else { %>
+                                            <%= cleanParagraphs(brand.color_palette) %>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Typography -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Typography
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Suggests fonts that align with your brand's personality. Typography choices affect readability and brand perception."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.typography) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Imagery Style -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Imagery Style
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Guides the selection and creation of visual content. Consistent imagery helps reinforce your brand message and connect with your audience."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.imagery_style) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Strategy -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Marketing Strategy
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Outlines your approach to reaching and engaging your target audience. A clear marketing strategy helps achieve business goals and measure success."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.marketing_strategy) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Insights -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Marketing Insights
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Provides analysis of market trends and opportunities. These insights help inform strategic decisions and identify growth areas."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.marketing_insights) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Toolkit -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Marketing Toolkit
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Lists essential marketing assets and resources. A well-equipped marketing toolkit helps implement your brand strategy effectively."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.marketing_toolkit) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Domain Recommendations -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Domain Recommendations
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Suggests available domain names for your brand. A good domain name helps with brand recognition and online presence."></i>
+                                    </h3>
+                                    <div class="content">
+                                        <% let domains = []; try { domains = JSON.parse(brand.domain_recommendations); } catch(e) {} %>
+                                        <% if (domains && domains.length && domains[0].name) { %>
+                                            <div class="domain-list d-flex flex-wrap gap-3">
+                                                <% domains.forEach(function(domain) { %>
+                                                    <div class="domain-pill d-flex align-items-center mb-2">
+                                                        <span class="domain-name"><%= domain.name + domain.extension %></span>
+                                                        <% if (domain.available !== undefined) { %>
+                                                            <% if (domain.available) { %>
+                                                                <span class="badge bg-success ms-2">Available</span>
+                                                            <% } else { %>
+                                                                <span class="badge bg-secondary ms-2">Taken</span>
+                                                            <% } %>
+                                                        <% } %>
+                                                    </div>
+                                                <% }); %>
+                                            </div>
+                                        <% } else { %>
+                                            <%= cleanParagraphs(brand.domain_recommendations) %>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Website Recommendations -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Website Development Recommendations
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Provides guidance for your website design and structure. These recommendations ensure your website effectively represents your brand."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.website_recommendations) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Marketing Efforts -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Marketing Efforts
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Outlines the specific marketing activities and initiatives undertaken to achieve marketing goals. Effective marketing efforts help build brand awareness and drive sales."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.marketing_efforts) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Strategic Management -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Strategic Management
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Explains how your brand will be managed and evolved. Effective strategic management ensures your brand stays relevant and competitive."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.strategic_management) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Long-term Perspective -->
+                        <div class="carousel-item">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h3 class="card-title d-flex align-items-center">
+                                        Long-term Perspective
+                                        <i class="fas fa-info-circle ms-2" data-bs-toggle="tooltip" data-bs-placement="right" 
+                                           title="Outlines your brand's growth strategy and future vision. A clear long-term perspective helps guide strategic decisions and maintain focus."></i>
+                                    </h3>
+                                    <div class="content">
+<%= cleanParagraphs(brand.long_term_perspective) %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .brand-title  {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .fa-solid, .fas {
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        font-size: 20px;
+    }
+
+    .carousel {
+        margin-bottom: 2rem;
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+
+    .carousel-item {
+        height: 100%;
+        overflow: hidden;
+        min-height: 400px;
+    }
+
+    .carousel-item::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card:hover {
+        transform: unset !important;
+    }
+
+    /* Ensure card content is properly contained */
+    .carousel-item .card {
+        height: 100%;
+        margin-bottom: 0;
+        border: none;
+        box-shadow: none;
+    }
+
+    .carousel-item .card-body {
+        height: 100%;
+        overflow-y: auto;
+        padding: 2rem;
+        max-height: 60vh;
+    }
+
+    .carousel-item .card-body::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .card:hover {
+        transform:unset !important;
+    }
+
+    .carousel-item .card-body::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 4px;
+    }
+
+    .carousel-item .card-body::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 4px;
+    }
+
+    .carousel-item .card-body::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .carousel-indicators {
+        margin-bottom: 0;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.25rem;
+        padding: 0.75rem 0;
+    }
+
+    .carousel-indicators button {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0 2px;
+        background-color: #dee2e6;
+        border: none;
+    }
+
+    .carousel-indicators button.active {
+        background-color: #0d6efd;
+    }
+
+    .carousel-indicators [data-bs-target] {
+        width: 6px;
+        height: 6px;
+        background-color: #dee2e6;
+    }
+
+    .carousel-indicators [data-bs-target].active {
+        background-color: #0d6efd;
+    }
+
+    .content {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        /* white-space: pre-wrap; */
+    }
+
+    .carousel-item {
+        min-height: 400px;
+    }
+
+    .carousel-item .card {
+        height: 100%;
+        margin: 0;
+    }
+
+    .carousel-item .card-body {
+        overflow-y: auto;
+        max-height: 400px;
+    }
+
+    /* Table of Contents Styles */
+    .toc-container {
+        position: sticky;
+        top: 20px;
+        height: calc(80vh);
+        overflow-y: auto;
+        padding: 20px;
+        /* background-color: #f8f9fa; */
+        /* border-right: 1px solid #dee2e6; */
+        min-height: 600px;
+    }
+
+    .toc-wrapper {
+        position: relative;
+        height: 100%;
+    }
+
+    .toc-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #0d6efd;
+    }
+
+    .toc-nav {
+        height: calc(80vh - 60px);
+        overflow-y: auto;
+    }
+
+    .toc-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        padding-right: 5px;
+    }
+
+    .toc-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .toc-list a {
+        display: block;
+        padding: 0.5rem;
+        color: #495057;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+    }
+
+    .toc-list a:hover {
+        background-color: #e9ecef;
+        color: #0d6efd;
+    }
+
+    .toc-list a.active {
+        background-color: #0d6efd;
+        color: white;
+    }
+
+    .toc-nav::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .toc-nav::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 3px;
+    }
+
+    .toc-nav::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 3px;
+    }
+
+    .toc-nav::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    .color-circle {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: 2px solid #dee2e6;
+        display: inline-block;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        margin-right: 1rem;
+    }
+
+    .domain-list {
+        margin-top: 1rem;
+    }
+    .domain-pill {
+        background: #f8f9fa;
+        border: 1px solid #dee2e6;
+        border-radius: 2rem;
+        padding: 0.5rem 1.25rem;
+        font-size: 1.1rem;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        transition: box-shadow 0.2s;
+    }
+    .domain-pill:hover {
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        background: #e9ecef;
+    }
+    .domain-name {
+        font-weight: 600;
+        color: #0d6efd;
+        letter-spacing: 0.5px;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Get carousel element and ensure only one instance
+    var carouselElement = document.getElementById('brandSlideshow');
+    var carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement, {
+        interval: false,
+        wrap: true,
+        keyboard: true
+    });
+
+    // Count carousel items for debugging
+    var carouselItems = carouselElement.querySelectorAll('.carousel-item');
+    console.log('Carousel items count:', carouselItems.length);
+
+    // Custom navigation buttons
+    document.getElementById('prevSlide').addEventListener('click', function() {
+        carousel.prev();
+    });
+    document.getElementById('nextSlide').addEventListener('click', function() {
+        carousel.next();
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowLeft') {
+            carousel.prev();
+        } else if (e.key === 'ArrowRight') {
+            carousel.next();
+        }
+    });
+
+    // Table of Contents navigation
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    // Update active state on slide change
+    carouselElement.addEventListener('slid.bs.carousel', function (e) {
+        tocLinks.forEach(link => link.classList.remove('active'));
+        if (tocLinks[e.to]) tocLinks[e.to].classList.add('active');
+    });
+    // Handle TOC clicks
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const slideIndex = parseInt(this.getAttribute('data-slide'));
+            console.log('ToC clicked, slideIndex:', slideIndex, 'carousel:', carousel, 'carouselItems:', carouselItems.length);
+            // Try Bootstrap API
+            try {
+                carousel.to(slideIndex);
+            } catch (err) {
+                // Fallback: trigger native event
+                var event = new CustomEvent('slide.bs.carousel', { detail: { to: slideIndex } });
+                carouselElement.dispatchEvent(event);
+            }
+        });
+    });
+    // Set initial active state
+    tocLinks[0].classList.add('active');
+});
+</script>
+
+<%
+// Helper to trim leading whitespace from each paragraph
+function cleanParagraphs(text) {
+    if (!text) return '';
+    return text
+        .split(/\n+/)
+        .map(p => p.trimStart())
+        .join('\n\n');
+}
+%> 

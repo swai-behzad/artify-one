@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="display-1 text-danger mb-4">Oops!</h1>
+                    <h2 class="mb-4"><%= message %></h2>
+                    <% if (locals.error && locals.error.stack && locals.NODE_ENV === 'development') { %>
+                        <pre class="text-start"><%= locals.error.stack %></pre>
+                    <% } %>
+                    <div class="mt-4">
+                        <a href="/" class="btn btn-primary">Return to Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

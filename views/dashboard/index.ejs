@@ -1,0 +1,114 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Dashboard</h1>
+            
+            <!-- Welcome Card -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Welcome, <%= user.username %>!</h3>
+                    <p class="card-text">
+                        <% if (user.plan) { %>
+                            You are currently on the <strong><%= user.plan.name %></strong> plan.
+                            <% if (user.subscriptionStatus === 'active') { %>
+                                Your subscription is active until <%= new Date(user.subscriptionEndDate).toLocaleDateString() %>.
+                            <% } else { %>
+                                Your subscription is currently inactive.
+                            <% } %>
+                        <% } else { %>
+                            You are currently on the free plan.
+                        <% } %>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Brand Creation Card -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Create New Brand</h3>
+                    <p class="card-text">Create a new brand with AI assistance.</p>
+                    <% if (canCreateMoreBrands) { %>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newBrandModal">
+                            <i class="fas fa-plus"></i> Create New Brand
+                        </button>
+                    <% } else { %>
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            You have reached the maximum number of brands allowed in your current plan.
+                            <a href="/dashboard/plans" class="alert-link">Upgrade your plan</a> to create more brands.
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+
+            <!-- Existing Brands -->
+            <% if (brands && brands.length > 0) { %>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Your Brands</h3>
+                        <div class="row">
+                            <% brands.forEach(brand => { %>
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                    <div class="card h-100">
+                                        <div class="card-body">
+                                            <h5 class="card-title"><%= brand.name %></h5>
+                                            <p class="card-text"><%= brand.value_proposition %></p>
+                                            <a href="/dashboard/brand/<%= brand.id %>" class="btn btn-primary">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <% }); %>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</div>
+
+<!-- New Brand Modal -->
+<div class="modal fade" id="newBrandModal" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Create New Brand</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form id="generateBrandForm" action="/dashboard/generate-brand" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+                    <div class="mb-3">
+                        <label for="brandName" class="form-label">Brand Name</label>
+                        <input type="text" class="form-control" id="brandName" name="brandName" required>
+                        <div class="form-text">Choose a unique and memorable name for your brand.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="companyDescription" class="form-label">Company Description</label>
+                        <textarea class="form-control" id="companyDescription" name="companyDescription" rows="4" required></textarea>
+                        <div class="form-text">Describe your company, its mission, and what makes it unique.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" form="generateBrandForm" class="btn btn-primary">
+                    <i class="fas fa-magic"></i> Generate Brand
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('generateBrandForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const submitButton = document.querySelector('button[form="generateBrandForm"]');
+    if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Generating...';
+    }
+    this.submit();
+});
+</script> 

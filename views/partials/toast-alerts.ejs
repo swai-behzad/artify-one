@@ -1,0 +1,42 @@
+<% if (typeof messages !== 'undefined' && (messages.error || messages.success)) { %>
+    <div class="toast-container position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+        <% if (messages.error && messages.error.length > 0) { %>
+            <div class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <i class="fas fa-exclamation-circle me-2"></i>
+                        <%= messages.error %>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        <% } %>
+        
+        <% if (messages.success && messages.success.length > 0) { %>
+            <div class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <i class="fas fa-check-circle me-2"></i>
+                        <%= messages.success %>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>
+        <% } %>
+    </div>
+<% } %>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all toasts
+    const toastElList = document.querySelectorAll('.toast');
+    const toasts = [...toastElList].map(toastEl => {
+        const toast = new bootstrap.Toast(toastEl, {
+            autohide: true,
+            delay: 5000 // 5 seconds
+        });
+        toast.show();
+        return toast;
+    });
+});
+</script> 

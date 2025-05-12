@@ -1,0 +1,118 @@
+<%- contentFor('body') %>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-4 mb-4">Pricing Plans</h1>
+            <p class="lead mb-4">Choose the perfect plan for your brand needs</p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Starter</h3>
+                    <div class="display-4 mb-4">$0</div>
+                    <p class="text-muted mb-4">Perfect for individuals and small projects</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2">✓ 1 Brand Generation</li>
+                        <li class="mb-2">✓ Basic Brand Strategy</li>
+                        <li class="mb-2">✓ Color Palette</li>
+                        <li class="mb-2">✓ Brand Messaging</li>
+                        <li class="mb-2">✗ Advanced Analytics</li>
+                        <li class="mb-2">✗ Team Collaboration</li>
+                    </ul>
+                    <a href="/auth/signup" class="btn btn-outline-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-primary">
+                <div class="card-body text-center">
+                    <div class="position-absolute top-0 end-0 m-3">
+                        <span class="badge bg-primary">Popular</span>
+                    </div>
+                    <h3 class="card-title">Professional</h3>
+                    <div class="display-4 mb-4">$29<span class="fs-6">/month</span></div>
+                    <p class="text-muted mb-4">Ideal for growing businesses</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2">✓ 5 Brand Generations</li>
+                        <li class="mb-2">✓ Advanced Brand Strategy</li>
+                        <li class="mb-2">✓ Color Palette & Typography</li>
+                        <li class="mb-2">✓ Brand Messaging & Voice</li>
+                        <li class="mb-2">✓ Basic Analytics</li>
+                        <li class="mb-2">✓ Team Collaboration (3 users)</li>
+                    </ul>
+                    <a href="/auth/signup" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <h3 class="card-title">Enterprise</h3>
+                    <div class="display-4 mb-4">$99<span class="fs-6">/month</span></div>
+                    <p class="text-muted mb-4">For large organizations</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2">✓ Unlimited Brand Generations</li>
+                        <li class="mb-2">✓ Premium Brand Strategy</li>
+                        <li class="mb-2">✓ Complete Visual Identity</li>
+                        <li class="mb-2">✓ Advanced Brand Messaging</li>
+                        <li class="mb-2">✓ Advanced Analytics</li>
+                        <li class="mb-2">✓ Team Collaboration (Unlimited)</li>
+                    </ul>
+                    <a href="/auth/signup" class="btn btn-outline-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h3 class="card-title mb-4">Frequently Asked Questions</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    Can I change my plan later?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing cycle.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    Is there a free trial?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, all paid plans come with a 14-day free trial. No credit card required.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    What payment methods do you accept?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    We accept all major credit cards, PayPal, and bank transfers for annual plans.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

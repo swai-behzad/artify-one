@@ -1,0 +1,126 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4"><%= brand.name %></h1>
+            
+            <!-- Brand Overview -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Brand Overview</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Value Proposition</h5>
+                            <p><%= brand.value_proposition %></p>
+                            
+                            <h5>Slogan</h5>
+                            <p><%= brand.slogan %></p>
+                            
+                            <h5>Brand Story</h5>
+                            <p><%= brand.brand_story %></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Target Audience</h5>
+                            <p><%= brand.target_audience %></p>
+                            
+                            <h5>Brand Position</h5>
+                            <p><%= brand.position %></p>
+                            
+                            <h5>Brand Voice</h5>
+                            <p><%= brand.brand_voice %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Identity -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Visual Identity</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Color Palette</h5>
+                            <div class="color-palette mb-3">
+                                <% if (brand.color_palette) { %>
+                                    <% JSON.parse(brand.color_palette).forEach(color => { %>
+                                        <div class="color-swatch" style="background-color: <%= color %>"></div>
+                                    <% }); %>
+                                <% } %>
+                            </div>
+                            
+                            <h5>Imagery Style</h5>
+                            <p><%= brand.imagery_style %></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Brand Personality</h5>
+                            <p><%= brand.personality %></p>
+                            
+                            <h5>Website Recommendations</h5>
+                            <p><%= brand.website_recommendations %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Strategy -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Marketing Strategy</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Marketing Strategy</h5>
+                            <p><%= brand.marketing_strategy %></p>
+                            
+                            <h5>Marketing Efforts</h5>
+                            <p><%= brand.marketing_efforts %></p>
+                            
+                            <h5>Marketing Toolkit</h5>
+                            <p><%= brand.marketing_toolkit %></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Marketing Insights</h5>
+                            <p><%= brand.marketing_insights %></p>
+                            
+                            <h5>Ideal Customer Profile</h5>
+                            <p><%= brand.ideal_customer_profile %></p>
+                            
+                            <h5>Domain Recommendations</h5>
+                            <p><%= brand.domain_recommendations %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Long-term Vision -->
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h3 class="card-title">Long-term Vision</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Long-term Perspective</h5>
+                            <p><%= brand.long_term_perspective %></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Brand Vision</h5>
+                            <p><%= brand.brand_vision %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.color-palette {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid #dee2e6;
+}
+</style> 
